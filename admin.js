@@ -335,8 +335,8 @@
 
   function parseMaps(u) {
     u = String(u || '').trim();
-    var m = u.match(/@(-?\d+\.\d+),(-?\d+\.\d+)/) ||
-      u.match(/!3d(-?\d+\.\d+)!4d(-?\d+\.\d+)/) ||
+    var m = u.match(/!3d(-?\d+\.\d+)!4d(-?\d+\.\d+)/) ||
+      u.match(/@(-?\d+\.\d+),(-?\d+\.\d+)/) ||
       u.match(/[?&](?:q|ll|query|destination)=(-?\d+\.\d+)(?:,|%2C)\s*(-?\d+\.\d+)/) ||
       u.match(/^\s*(-?\d+\.\d+)\s*[, ]\s*(-?\d+\.\d+)\s*$/);
     return m ? { lat: +m[1], lng: +m[2] } : null;
