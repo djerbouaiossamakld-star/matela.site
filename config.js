@@ -7,8 +7,8 @@
      قواعد Firestore (ملف firestore.rules).
    ===================================================================== */
 window.MX_FIREBASE = {
-  apiKey: "",
-  authDomain: "",
-  projectId: "",
-  appId: ""
+  apiKey: "AIzaSyBZP3YtsmRgn1lXLcezziiFGSRmdG-kSNk",
+  authDomain: "matelas-site-8adeb.firebaseapp.com",
+  projectId: "matelas-site-8adeb",
+  appId: "1:571554861476:web:3e708f0ca361fedbd83131"
 };
