@@ -289,5 +289,16 @@
     }
   };
 
+  // بعد أي حفظ من لوحة التحكم نمسح النسخة المؤقتة للموقع في هذا المتصفح،
+  // فتظهر التعديلات فورًا عند فتح الموقع (وبعد 3 دقائق على الأكثر عند الزبائن).
+  ['saveSettings', 'saveCategory', 'deleteCategory', 'saveProduct', 'deleteProduct', 'patchProduct', 'importAll'].forEach(function (name) {
+    var orig = MX[name];
+    MX[name] = async function () {
+      var r = await orig.apply(MX, arguments);
+      try { localStorage.removeItem('mx_cache_v1'); } catch (e) { /* ignore */ }
+      return r;
+    };
+  });
+
   window.MX = MX;
 })();
