@@ -56,7 +56,7 @@
     }
     return { v: +p.basePrice || 0, from: false };
   }
-  function fmt(n) { return '⁦' + String(Math.round(+n || 0)).replace(/\B(?=(\d{3})+(?!\d))/g, ' ') + '⁩'; }
+  function fmt(n) { return '\u2066' + String(Math.round(+n || 0)).replace(/\B(?=(\d{3})+(?!\d))/g, ' ') + '\u2069'; }
 
   async function run(btn, fn, okMsg) {
     if (btn) { btn.disabled = true; }
